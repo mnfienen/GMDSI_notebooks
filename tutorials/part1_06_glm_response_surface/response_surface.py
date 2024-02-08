@@ -17,7 +17,7 @@ MODEL_NAM = "freyberg.nam"
 PST_NAME = 'freyberg.pst'
 NUM_STEPS_RESPSURF = 40
 
-def run_respsurf(par_names=None, pstfile='freyberg.pst', WORKING_DIR='freyberg_mf6',num_workers=8,port=4004):
+def run_respsurf(par_names=None, pstfile='freyberg.pst', WORKING_DIR='freyberg_mf6',num_workers=12,port=4004):
     pst = pyemu.Pst(os.path.join(WORKING_DIR,pstfile))
     par = pst.parameter_data
     pst.pestpp_options['sweep_parameter_csv_file'] = pstfile.replace('.pst', "sweep_in.csv")
